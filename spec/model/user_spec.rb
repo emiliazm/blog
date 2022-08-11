@@ -38,8 +38,8 @@ RSpec.describe User, type: :model do
     end
 
     it 'three_most_recent_posts should return only the first three recent comments' do
-      postCount = author.three_most_recent_posts.length
-      expect(postCount).to eq(3)
+      post_count = author.three_most_recent_posts.length
+      expect(post_count).to eq(3)
     end
   end
 end
