@@ -1,0 +1,38 @@
+.user_ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vh;
+}
+
+.user_li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style-type: none;
+  height: 9vh;
+  width: 82vw;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.user_info {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  border: 2px solid black;
+  padding: 2vh;
+}
+
+.post_count {
+  align-self: flex-end;
+}
+
+.user_img {
+  border: 2px solid black;
+  width: 10vh;
+  height: 10vh;
+}
