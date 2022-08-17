@@ -18,7 +18,13 @@ RSpec.describe 'Users', type: :request do
   end
 
   context 'When testing GET #show' do
-    before(:example) { get '/users/:id' }
+    subject(:author) do
+      User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
+    end
+
+    before(:example) { get user_path(author.id) }
+
+    after(:example) { User.destroy_all }
 
     it 'is a success' do
       expect(response).to have_http_status(:ok)
@@ -29,7 +35,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'should display correct placeholder' do
-      expect(response.body).to include('Here is the information for a specific user')
+      expect(response.body).to include('See all posts')
     end
   end
 end

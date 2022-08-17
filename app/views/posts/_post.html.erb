@@ -1,0 +1,41 @@
+<%= link_to user_post_path(@user.id, post.id) do %>
+  <div class="post_li">
+    <% 
+      truncate = !current_page?(user_post_path(@user.id, post.id))
+    %>
+
+    <% if truncate %>
+      <% post_text = post.text[0..100] %>
+      <h2 class="post_title"><%= post.title %></h2>
+    <% else %>
+      <% post_text = post.text %>
+      <div class="head_post">
+        <h3><%= post.title %> by <%= post.author.name %></h3>
+        <p class="comment_count">
+          Comments: <%= post.comments_count %>, Likes: <%= post.likes_count %>
+        </p>
+      </div>
+    <% end %>
+    <p class="post_text"><%= post_text %></p>
+
+    <% if truncate %>
+      <p class="comment_count">
+        Comments: <%= post.comments_count %>, Likes: <%= post.likes_count %>
+      </p>
+    <% end %>
+
+  </div>
+  
+  <%if post.comments_count > 0 %>
+    <% if current_page?(user_posts_path(@user.id)) %>
+      <div class="comments_ul">
+        <%= render post.five_most_recent_comments %>
+      </div>
+      <% elsif current_page?(user_post_path(@user.id, post.id)) %>
+      <div class="comments_ul">
+        <%= render post.comments %>
+      </div>
+    <% end %>
+  <% end %>
+  
+<% end %>

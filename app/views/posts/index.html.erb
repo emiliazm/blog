@@ -1,1 +1,7 @@
-<h2>"Here is a list of posts for a given user"</h2>
+<div class="posts_index_container">
+  <%= render @user %>
+  <%= render @posts %>
+  <%= button_tag 'Pagination', type: 'button' %>
+</div>
+
+
