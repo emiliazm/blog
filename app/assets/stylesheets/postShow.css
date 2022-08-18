@@ -2,3 +2,10 @@
   display: flex;
   justify-content: space-between;
 }
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
