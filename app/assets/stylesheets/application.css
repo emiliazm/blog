@@ -22,6 +22,9 @@
 body {
   margin-top: 10vh;
   padding: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @import url("userIndex");

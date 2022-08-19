@@ -17,6 +17,7 @@
       </div>
     <% end %>
     <p class="post_text"><%= post_text %></p>
+    
 
     <% if truncate %>
       <p class="comment_count">
@@ -26,6 +27,7 @@
 
   </div>
   
+  
   <%if post.comments_count > 0 %>
     <% if current_page?(user_posts_path(@user.id)) %>
       <div class="comments_ul">
@@ -33,9 +35,10 @@
       </div>
       <% elsif current_page?(user_post_path(@user.id, post.id)) %>
       <div class="comments_ul">
-        <%= render post.comments %>
+        <%= render post.comments.order(id: :desc) %>
       </div>
     <% end %>
   <% end %>
   
 <% end %>
+<div class="like_button"><%= button_to 'Like', user_post_likes_path(@user, post), method: :post %></div>

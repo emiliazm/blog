@@ -1,7 +1,12 @@
 <div class="posts_index_container">
   <%= render @user %>
   <%= render @posts %>
+
+  <div>
+    <%= link_to new_user_post_path(@user.id) do %>
+      <%= button_tag 'Add new post', type: 'button' %>
+    <% end %>
+  </div>
+
   <%= button_tag 'Pagination', type: 'button' %>
 </div>
-
-
