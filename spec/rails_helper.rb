@@ -36,6 +36,7 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 
+# rubocop:disable Metrics/BlockLength
 RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.use_transactional_fixtures = true
@@ -70,3 +71,4 @@ RSpec.configure do |config|
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
