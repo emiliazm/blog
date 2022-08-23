@@ -35,7 +35,7 @@
       </div>
       <% elsif current_page?(user_post_path(@user.id, post.id)) %>
       <div class="comments_ul">
-        <%= render post.comments.order(id: :desc) %>
+        <%= render post.all_comments %>
       </div>
     <% end %>
   <% end %>

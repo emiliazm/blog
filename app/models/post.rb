@@ -5,6 +5,10 @@ class Post < ApplicationRecord
 
   after_save :update_post_counter
 
+  def all_comments
+    comments.includes([:author]).order(created_at: :desc)
+  end
+
   def five_most_recent_comments
     comments.order(created_at: :desc).first(5)
   end
