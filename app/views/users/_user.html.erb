@@ -1,6 +1,6 @@
 <%= link_to user_path(user.id) do %>
   <div class="user_li">
-    <%= image_tag (user.photo), class: "user_img" %>
+    <%= image_tag (user.photo || 'https://e7.pngegg.com/pngimages/178/595/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black.png'), class: "user_img" %>
     <div class="user_info">
       <h2 class="user_name"><%= user.name %></h2>
       <p class="post_count">Number of posts: <%= user.post_count %>

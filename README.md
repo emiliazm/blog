@@ -45,6 +45,10 @@
 - Twitter: [@emilia_zm](https://twitter.com/emilia_zm)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/emiliazm/)
 
+👤 **Mahmoud Makhlouf**
+
+- GitHub: [@devMahmoud](https://github.com/devMahmoud)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mahmoud-abdelkader-makhlouf/)
 
 ## 🤝 Contributing
 

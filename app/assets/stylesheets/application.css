@@ -27,6 +27,13 @@ body {
   align-items: center;
 }
 
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  margin-bottom: 20px;
+}
+
 @import url("userIndex");
 @import url("userShow");
 @import url("postIndex");
