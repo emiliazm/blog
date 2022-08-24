@@ -79,3 +79,5 @@ source 'https://rubygems.org'
 
 gem 'ffi'
 gem 'rails-controller-testing'
+
+gem 'devise'
