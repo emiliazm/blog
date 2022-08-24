@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: { confirmations: 'confirmations' }
   root to: "users#index"
 
   resources :users do
