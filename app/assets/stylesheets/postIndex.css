@@ -7,12 +7,18 @@
 }
 
 .comments_ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   border: 2px solid black;
   padding: 5px;
 }
 
 .like_button {
-  align-self: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-top: 5px;
 }
 
 .post-form {
