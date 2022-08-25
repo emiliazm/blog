@@ -9,7 +9,7 @@
   </div>
 
   <div class = "post_ul">
-    <%= render @user.three_most_recent_posts %>
+    <%= render @user.three_most_recent_posts.includes([:author]) %>
   </div>
   
   <%= link_to user_posts_path(@user.id) do %>
