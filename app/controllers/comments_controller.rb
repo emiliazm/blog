@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
+
   def new
     @comment = Comment.new
     respond_to do |format|
@@ -11,12 +13,15 @@ class CommentsController < ApplicationController
     @comment.post_id = params[:post_id]
 
     if @comment.save
-      flash[:success] = 'Comment created succesfully'
       redirect_to user_post_path(current_user.id, @comment.post_id)
     else
-      flash[:error] = 'An error occured when creating the comment'
       render :new
     end
+  end
+
+  def destroy
+    @comment.destroy
+    redirect_to request.referrer
   end
 
   private
