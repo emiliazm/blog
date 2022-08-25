@@ -9,7 +9,11 @@ class User < ApplicationRecord
   has_many :likes, foreign_key: 'author_id'
 
   def three_most_recent_posts
-    posts.order(created_at: :desc).first(3)
+    posts.order(created_at: :desc).limit(3)
+  end
+
+  def admin?
+    role == 'admin'
   end
 
   validates :name, presence: true, length: { in: 2..25 }
